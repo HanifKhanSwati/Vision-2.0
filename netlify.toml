@@ -1,0 +1,6 @@
+[dev]
+ command = 'yarn workspace site develop'
+ functionsPort = 3030
+ port = 3030
+ publish = 'site/public'
+ targetPort = 3030

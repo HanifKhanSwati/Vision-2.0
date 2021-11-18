@@ -117,7 +117,7 @@ const cancel = () => {
 
 const copy = async() => {
     const roomid = document.getElementById("roomid").innerText;
-    await navigator.clipboard.writeText("http://localhost:3030/join/" + roomid);
+    await navigator.clipboard.writeText("https://wizardly-wozniak-a279d2.netlify.app/join/" + roomid);
 };
 const invitebox = () => {
     $("#getCodeModal").modal("show");

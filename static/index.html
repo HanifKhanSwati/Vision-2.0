@@ -1,0 +1,554 @@
+<!DOCTYPE html>
+<html lang="en">
+
+  <head>
+
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+    <meta name="description" content="VisionMeeting">
+    <meta name="HanifKhanSwati" content="Khantechs">
+    <script defer src="https://unpkg.com/peerjs@1.3.1/dist/peerjs.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/peerjs/1.3.1/peerjs.min.js.map"></script>
+   <script src="https://code.jquery.com/jquery-3.5.1.slim.min.js" integrity="sha384-DfXdz2htPH0lsSSs5nCTpuj/zy4C+OGpamoFVy38MVBnE+IbbVYUew+OrCXaRkfj" crossorigin="anonymous"></script>
+   <script src="https://cdn.jsdelivr.net/npm/popper.js@1.16.0/dist/umd/popper.min.js" integrity="sha384-Q6E9RHvbIyZFJoft+2mJbHaEWldlvI9IOYy5n3zV9zzTtmI3UksdQRVvoxMfooAo" crossorigin="anonymous"></script>
+   <script src="/socket.io/socket.io.js" defer></script>
+    <link href="https://fonts.googleapis.com/css?family=Poppins:100,200,300,400,500,600,700,800,900" rel="stylesheet">
+    <link href="https://epicbootstrap.com/snippets/footer-dark" rel="stylesheet">
+    <script>
+      const myname = "<%= Myname %>"
+      const roomId = "<%= roomid %>"
+    </script>
+
+    <title>Vision</title>
+
+    <!-- Bootstrap CSS Files -->
+    <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+
+    <!-- Local CSS Files -->
+    <link rel="stylesheet" href="public/assets/css/fontawesome.css">
+    <link rel="stylesheet" href="public/assets/css/style.css">
+    <link rel="stylesheet" href="public/assets/css/owl.css">
+    <link rel="stylesheet" href="public/assets/css/lightbox.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/css/bootstrap.min.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/ionicons/2.0.1/css/ionicons.min.css">
+
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script src="script.js" defer></script>
+
+  </head>
+
+<body>
+
+  <!----------------------------------------- Sub Header ----------------------->
+  <!------------------------------------------Sub Header------------------------>
+  <div class="sub-header">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-8 col-sm-8">
+          <div class="left-content">
+            <p>This is an Educational site for Tecahers and Students <em>Absolutely Free</em> Welcome.</p>
+          </div>
+        </div>
+        <div class="col-lg-4 col-sm-4">
+          <div class="right-icons">
+            <ul>
+              <li><a href="#"><i class="fa fa-facebook"></i></a></li>
+              <li><a href="#"><i class="fa fa-twitter"></i></a></li>
+              <li><a href="#"><i class="fa fa-behance"></i></a></li>
+              <li><a href="#"><i class="fa fa-linkedin"></i></a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <!-- ***** Header Area Start ***** -->
+  <header class="header-area header-sticky">
+      <div class="container">
+          <div class="row">
+              <div class="col-12">
+                  <nav class="main-nav">
+                      <!-- ***** Logo Start ***** -->
+                      <a href="public/index.html" class="logo">
+                          Vision Meeting
+                      </a>
+                      <!-- ***** Logo End ***** -->
+                      <!-- ***** Menu Start ***** -->
+                      <ul class="nav">
+                          <li class="scroll-to-section"><a href="#top" class="active">Home</a></li>
+                          <li scroll-to-section><a href="#Facts">Facts</a></li>
+                          <li scroll-to-section><a href="#meetvision">New Meeting</a></li>
+                          <li class="has-sub">
+                              <a href="javascript:void(0)">Pages</a>
+                              <ul class="sub-menu">
+                                  <li scroll-to-section><a href="#apply">Upcoming Meetings</a></li>
+                                  <li scroll-to-section><a href="#contact">Meeting Details</a></li>
+                              </ul>
+                          </li>
+                          <li scroll-to-section><a href="#meetvision">Courses</a></li> 
+                          <li scroll-to-section><a href="#contact">Contact Us</a></li> 
+                      </ul>        
+                      <a class='menu-trigger'>
+                          <span>Menu</span>
+                      </a>
+                      <!-- ***** Menu End ***** -->
+                  </nav>
+              </div>
+          </div>
+      </div>
+  </header>
+  <!-- ***** Header Area End ***** -->
+
+  <!-- ***** Main Banner Area Start ***** -->
+  <section class="section main-banner" id="top" data-section="section1">
+      <video autoplay muted loop id="bg-video">
+          <source src="public/assets/images/course-video.mp4" type="video/mp4" />
+      </video>
+
+      <div class="video-overlay header-text">
+          <div class="container">
+            <div class="row">
+              <div class="col-lg-12">
+                <div class="caption">
+                  <h6>Hello Students</h6>
+                  <h2>Welcome to Education Portal</h2>
+                  <p>This is an education meeting site provides and deliver best teaching expirience
+                    and easy student teacher interaction using video meeting rooms. We provide best user friendly environment.</p>              
+                   <div class="main-button-red">
+                    <div scroll-to-section><a href="#meetvision">Join Us Now!</a></div>
+                   </div>
+                </div>
+              </div>
+           </div>
+          </div>
+       </div>
+  </section>
+  <!-- ***** Main Banner Area End ***** -->
+
+  <section class="services">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-12">
+          <div class="owl-service-item owl-carousel">
+          
+            <div class="item">
+              <div class="icon">
+                <img src="public/assets/images/service-icon-01.png" alt="">
+              </div>
+              <div class="down-content">
+                <h4>Best Education</h4>
+                <p>Best Site for Taking Online Classes That'll Boost Your Skills and Get You Ahead.And Student
+                  can even make their own personal room for classmates discussionn without any hesitaion.
+                </p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="icon">
+                <img src="public/assets/images/service-icon-02.png" alt="">
+              </div>
+              <div class="down-content">
+                <h4>Best Teachers</h4>
+                <p>Our Site is an innovative online learning platform for students.We provide best teachers 
+                  with high profile expirience.
+                </p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="icon">
+                <img src="public/assets/images/service-icon-03.png" alt="">
+              </div>
+              <div class="down-content">
+                <h4>Best Students Care</h4>
+                <p>We care about students individually so they get quality education without any hesitaion.</p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="icon">
+                <img src="public/assets/images/service-icon-02.png" alt="">
+              </div>
+              <div class="down-content">
+                <h4>Online Meeting</h4>
+                <p>Our main job is to provide glicheless video meeting with unlimitted time frame
+                  and contineous playback.</p>
+              </div>
+            </div>
+            
+            <div class="item">
+              <div class="icon">
+                <img src="public/assets/images/service-icon-03.png" alt="">
+              </div>
+              <div class="down-content">
+                <h4>Best Networking</h4>
+                <p>We provide best Networking so that student can get no disappointment and nonstop Networking .
+                  we make sure that every student gets quality Education.
+                </p>
+              </div>
+            </div>
+            
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="upcoming-meetings" id="meetings">
+    
+        <div class="col-lg-12">
+          <div class="section-heading">
+            <h2>Join Room Now</h2>
+          </div>
+        </div>
+  </section>
+
+  <section class="apply-now" id="apply">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6 align-self-center">
+          <div class="row">
+            <div class="col-lg-12">
+              <div class="item">
+                <h3>Sign Up Here</h3>
+                <p>If have not register yet feel free to register now Just by clicking "Join Us Now". You can feel free to modify or edit this layout.</p>
+                <div class="main-button-red">
+                  <div class="scroll-to-section"><a href="#contact">Join Us Now!</a></div>
+              </div>
+              </div>
+            </div>
+            <div class="col-lg-12">
+              <div class="item">
+                <h3>Already An Account</h3>
+                <p>If you have already have account then proceed below to Sign In. Please contact us for more information.</p>
+                <div class="main-button-yellow">
+                  <div class="scroll-to-section"><a href="#contact">Sign In</a></div>
+              </div>
+              </div>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-6">
+          <div class="accordions is-first-expanded">
+            <article class="accordion">
+                <div class="accordion-head">
+                    <span>About Vision</span>
+                    <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                </div>
+                <div class="accordion-body">
+                    <div class="content">
+                        <p>If you want to make a room so that you can start teaching online to your studets then feel free to access our online room meetings made for student teacher interacton 
+                          Now one can have easy access to far and broad students.
+                          
+                          
+                    </div>
+                </div>
+            </article>
+            <article class="accordion">
+                <div class="accordion-head">
+                    <span>For Teaching Institute</span>
+                    <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                </div>
+                <div class="accordion-body">
+                    <div class="content">
+                        <p>Now any institution can use our online meeting web Application Absolutely Free with no time limit.
+                          So just enroll your institute with our site and we will let you know after registration succeeds.
+                          and any one want just personal meeting can also have access to use and talk with their loved ones.
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article class="accordion">
+                <div class="accordion-head">
+                    <span>Please tell your friends</span>
+                    <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                </div>
+                <div class="accordion-body">
+                    <div class="content">
+                        <p>Please tell everyone about our web application and also inform them about our plateform which gives free access to eveyone to attain meetings for commercial personal public or education uses.
+
+                        </p>
+                    </div>
+                </div>
+            </article>
+            <article class="accordion last-accordion">
+                <div class="accordion-head">
+                    <span>Share this to your colleagues</span>
+                    <span class="icon">
+                        <i class="icon fa fa-chevron-right"></i>
+                    </span>
+                </div>
+                <div class="accordion-body">
+                    <div class="content">
+                        <p>Please tell everyone about our web application and also inform them about our plateform which gives free access to eveyone to attain meetings for commercial personal public or education uses.</p>
+                    </div>
+                </div>
+            </article>
+        </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-- ---------------- ------------ --------- -----------------From here Room Hosting begins --------------------->
+  <section class= Meetingo id="meetvision">
+    <div class="head">
+      <h1>Welcome TO Room</h1>
+      <div class="Name-Page">
+        <div class="form">
+            <form class="known-form" action="/join">
+                <input type="text" placeholder="Enter your name" name="name" />
+                <button>Host a Meeting</button>
+                <p><a href="javascript:show()">Join Meeting?</a></p>
+            </form>
+
+            <form class="unknown-form" action="/joinold">
+                <input type="text" placeholder="Enter your name" name="name" />
+                <input type="text" placeholder="Enter Meeting Id" name="meeting_id" />
+                <button>Join Meeting</button>
+                <p>
+                    <a href="javascript:show()">Host Meeting?</a>
+                </p>
+            </form>
+        </div>
+      </div>
+    </div>
+    <script>
+        function show() {
+            $('form').animate({ height:"toggle",opacity:"toggle"},"slow")
+        }
+    </script>
+  </section>
+  <!--============================================Factts==========================================-->
+  <section class="our-facts" id="Facts">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-6">
+          <div class="row">
+            <div class="col-lg-12">
+              <h2>A Few Facts About Our Site</h2>
+            </div>
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-12">
+                  <div class="count-area-content percentage">
+                    <div class="count-digit">94</div>
+                    <div class="count-title">Succeed Students</div>
+                  </div>
+                </div>
+                <div class="col-12">
+                  <div class="count-area-content">
+                    <div class="count-digit">126</div>
+                    <div class="count-title">Current Teachers</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+            <div class="col-lg-6">
+              <div class="row">
+                <div class="col-12">
+                  <div class="count-area-content new-students">
+                    <div class="count-digit">2345</div>
+                    <div class="count-title">New Students</div>
+                  </div>
+                </div> 
+                <div class="col-12">
+                  <div class="count-area-content">
+                    <div class="count-digit">32</div>
+                    <div class="count-title">Awards</div>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div> 
+        <div class="col-lg-6 align-self-center">
+          <div class="video">
+            <video id="myvideo" width="560" height="320" autoplay muted controls>
+              <source src="public/assets/images/edu.mp4" type="video/mp4">
+              <source src="public/assets/images/edu.mp4" type="video/ogg">
+            Your browser does not support the video tag.
+            </video>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+
+  <section class="contact-us" id="contact">
+    <div class="container">
+      <div class="row">
+        <div class="col-lg-9 align-self-center">
+          <div class="row">
+            <div class="col-lg-12">
+              <form id="contact" action="" method="post">
+                <div class="row">
+                  <div class="col-lg-12">
+                    <h2>Let's get in touch</h2>
+                  </div>
+                  <div class="col-lg-4">
+                    <fieldset>
+                      <input name="name" type="text" id="name" placeholder="YOURNAME...*" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-4">
+                    <fieldset>
+                    <input name="email" type="text" id="email" pattern="[^ @]*@[^ @]*" placeholder="YOUR EMAIL..." required="">
+                  </fieldset>
+                  </div>
+                  <div class="col-lg-4">
+                    <fieldset>
+                      <input name="subject" type="text" id="subject" placeholder="SUBJECT...*" required="">
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <textarea name="message" type="text" class="form-control" id="message" placeholder="YOUR MESSAGE..." required=""></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button type="submit" id="form-submit" class="button">SEND MESSAGE NOW</button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+        <div class="col-lg-3">
+          <div class="right-info">
+            <ul>
+              <li>
+                <h6>Phone Number</h6>
+                <span>0300-00000-0</span>
+              </li>
+              <li>
+                <h6>Email Address</h6>
+                <span>info@Visionmeeting.edu</span>
+              </li>
+              <li>
+                <h6>Street Address</h6>
+                <span>str#03 c6 sec:6 Karachi</span>
+              </li>
+              <li>
+                <h6>Website URL</h6>
+                <span>www.Visionmeeting.edu</span>
+              </li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+  </section>
+  <!-----------------------------Footer begins here------------------------->
+  <div class="footer-dark">
+    <footer>
+        <div class="container">
+            <div class="row">
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>Services</h3>
+                    <ul>
+                        <li><a href="#meetvision">Meeting</a></li>
+                        <li class="scroll-to-section"><a href="#apply">New Meeting</a></li>
+                    </ul>
+                </div>
+                <div class="col-sm-6 col-md-3 item">
+                    <h3>About</h3>
+                    <ul>
+                        <li scroll-to-section><a href="#top">Company</a></li>
+                        <li scroll-to-section><a href="#top">Team</a></li>
+                        <li scroll-to-section><a href="#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="col-md-6 item text">
+                    <h3>VisionMeeting</h3>
+                    <p>Welcome to Vision Meeting, your number one source for Meeting.
+                      Founded in 2021 by Hanif Khan. We hope you enjoy our site as much as we enjoy offering to you. 
+                      If you have any questions or comments, please don't hesitate to contact us.</p>
+                </div>
+                <div class="col item social"><a href="#"><i class="icon ion-social-facebook"></i></a><a href="#"><i class="icon ion-social-twitter"></i></a><a href="#"><i class="icon ion-social-snapchat"></i></a><a href="#"><i class="icon ion-social-instagram"></i></a></div>
+            </div>
+        </div>
+    </footer>
+</div>
+<!-------------footer bar------------>
+<div class="footerbar">
+  <p class="copyright">Copyright © 2022 Vision Meeting Co., Ltd. All Rights Reserved.<br>
+  
+    Design By: <a href="https://www.khantechs.tk"><em>HanifKhanSwati</em></a>
+  </p>
+  </div>
+
+  <!-- Scripts -->
+  <!-- Bootstrap core JavaScript -->
+    <script src="vendor/jquery/jquery.min.js"></script>
+    <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.2.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/4.1.3/js/bootstrap.bundle.min.js"></script>
+
+    <script src="public/assets/js/isotope.min.js"></script>
+    <script src="public/assets/js/owl-carousel.js"></script>
+    <script src="public/assets/js/lightbox.js"></script>
+    <script src="public/assets/js/tabs.js"></script>
+    <script src="public/assets/js/video.js"></script>
+    <script src="public/assets/js/slick-slider.js"></script>
+    <script src="public/assets/js/custom.js"></script>
+
+    <script>
+        // =======================For Smooth Scroll Ajax  JQueries=========================...
+        $('.nav li:first').addClass('active');
+
+        var showSection = function showSection(section, isAnimate) {
+          var
+          direction = section.replace(/#/, ''),
+          reqSection = $('.section').filter('[data-section="' + direction + '"]'),
+          reqSectionPos = reqSection.offset().top - 0;
+
+          if (isAnimate) {
+            $('body, html').animate({
+              scrollTop: reqSectionPos },
+            800);
+          } else {
+            $('body, html').scrollTop(reqSectionPos);
+          }
+
+        };
+
+        var checkSection = function checkSection() {
+          $('.section').each(function () {
+            var
+            $this = $(this),
+            topEdge = $this.offset().top - 80,
+            bottomEdge = topEdge + $this.height(),
+            wScroll = $(window).scrollTop();
+            if (topEdge < wScroll && bottomEdge > wScroll) {
+              var
+              currentId = $this.data('section'),
+              reqLink = $('a').filter('[href*=\\#' + currentId + ']');
+              reqLink.closest('li').addClass('active').
+              siblings().removeClass('active');
+            }
+          });
+        };
+
+        $('.main-menu, .responsive-menu, .scroll-to-section').on('click', 'a', function (e) {
+          e.preventDefault();
+          showSection($(this).attr('href'), true);
+        });
+
+        $(window).scroll(function () {
+          checkSection();
+        });
+    </script>
+    <script src="http://localhost:3030/public/main.js"></script>
+</body>
+</html>

@@ -16,7 +16,7 @@ window.onload = () => {
 var peer = new Peer(undefined, {
     path: "/peerjs",
     host: "/",
-    port: "3030",
+    port: "443",
 });
 
 let myVideoStream;
@@ -117,7 +117,7 @@ const cancel = () => {
 
 const copy = async() => {
     const roomid = document.getElementById("roomid").innerText;
-    await navigator.clipboard.writeText("https://visionmeeting.netlify.app/join/" + roomid);
+    await navigator.clipboard.writeText("/join/" + roomid);
 };
 const invitebox = () => {
     $("#getCodeModal").modal("show");
